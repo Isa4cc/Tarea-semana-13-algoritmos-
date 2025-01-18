@@ -10,9 +10,11 @@ El proceso termina cuando el usuario responde con una ‘N’, mientras tanto, d
 
 int main(){
 
-    float Diametro,Diam, Altu, mayorDiametro, menorDiametro, Altura, promedioAltura;
+    float Diametro,Diam, Altu, mayorDiametro, menorDiametro, Altura, promedioAltura, mayorAltura, menorAltura;
     char opcin;
     int contD, contA;
+    mayorAltura=0;
+    menorAltura=__INT_MAX__;
     menorDiametro=__INT_MAX__; //Es una constante propia de C, la cual almacena el valor más alto que puede tomar una variable.
     mayorDiametro=0;
     Diam=0;
@@ -48,6 +50,14 @@ int main(){
             }
         }while(Altura<=0);
 
+        if(Altura>mayorAltura){
+            mayorAltura=Altura;
+        }
+        if (Altura<menorAltura){
+            menorAltura=Altura;
+        }
+        
+
         Altu+=Altura;
         contA++;
 
@@ -64,6 +74,8 @@ int main(){
     printf("\nEl promedio de altura de los troncos es: %f", promedioAltura);
     printf("\nEl mayor diametro ingresado es: %f", mayorDiametro);
     printf("\nEl menor diametro ingresado es: %f", menorDiametro);
+    printf("\nLa mayor altura ingresada es: %f", mayorAltura);
+    printf("\nLa menor altura ingresada es: %f", menorAltura);
     
     return 0;
 }
