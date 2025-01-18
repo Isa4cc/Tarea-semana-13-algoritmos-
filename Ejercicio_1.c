@@ -18,9 +18,9 @@ int main(){
         printf("\n o el cero el programa terminara: ");
         scanf("%d",&num);
 
-        if(num>=0){
-            if(num%2==0){ //El cero al momento de finalizar el programa tambien va a contarlo
-            i_par++;      // porque tambien es un numero par
+        if(num>=0){       //La condición incluye al num 0,
+            if(num%2==0){ // porque tambien es un numero par
+            i_par++;      
             }else{
             i_impar++;
             }
