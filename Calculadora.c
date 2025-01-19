@@ -65,16 +65,23 @@ int main()
 			} else if(num2==0) {
 				pot=1;
 				printf("La potencia de %f y %f es %f\n",num1,num2,pot);
-			} else {
+			} else if(num2<0) {
+				num2=-num2;
 				do {
 					pot*=num1;
 					i++;
-
+				} while(i<=num2);
+				pot=1/pot;
+				num2=-num2;
+				printf("La potencia de %f y %f es %f\n",num1,num2,pot);
+			}else{
+				do {
+					pot*=num1;
+					i++;
 				} while(i<=num2);
 				printf("La potencia de %f y %f es %f\n",num1,num2,pot);
 			}
 
-			
 			break;
 		case(6):
 			break;
