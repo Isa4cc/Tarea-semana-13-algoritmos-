@@ -10,7 +10,7 @@ El proceso termina cuando el usuario responde con una ‘N’, mientras tanto, d
 
 int main(){
 
-    float Diametro,Diam, Altu, mayorDiametro, menorDiametro, Altura, promedioAltura, mayorAltura, menorAltura;
+    float Diametro,Diam, Altu, mayorDiametro, menorDiametro, Altura, promedioAltura, mayorAltura, menorAltura, promedioDiametro;
     char opcin;
     int contD, contA;
     mayorAltura=0;
@@ -70,8 +70,10 @@ int main(){
         }while(opcin !='s' && opcin !='S' && opcin !='n' && opcin !='N');	
 
     }while(opcin !='n' && opcin !='N');
+    promedioDiametro=Diam/contD;
     promedioAltura=Altu/contA;
     printf("\nEl promedio de altura de los troncos es: %f", promedioAltura);
+    printf("\nEl promedio de diametro de los troncos es: %f", promedioDiametro);
     printf("\nEl mayor diametro ingresado es: %f", mayorDiametro);
     printf("\nEl menor diametro ingresado es: %f", menorDiametro);
     printf("\nLa mayor altura ingresada es: %f", mayorAltura);
